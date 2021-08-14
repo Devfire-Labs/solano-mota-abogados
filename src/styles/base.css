@@ -12,3 +12,13 @@
 	font-family: 'Blueberry Sans';
 	src: url('/fonts/BlueberrySans-Bold.woff2');
 }
+
+h1,
+h2,
+h3 {
+	@apply font-gilland;
+}
+
+body {
+	@apply font-galey text-center;
+}
