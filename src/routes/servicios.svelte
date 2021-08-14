@@ -39,6 +39,8 @@
 	];
 </script>
 
+<svelte:head><title>Servicios</title></svelte:head>
+
 <header class="">
 	<h1 class="text-xl">Nuestros Servicios</h1>
 	<p class="mt-3">

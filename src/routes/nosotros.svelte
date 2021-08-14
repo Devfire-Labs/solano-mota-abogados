@@ -34,15 +34,6 @@
 
 <svelte:head><title>Sobre nosotros</title></svelte:head>
 
-<header id="work-with-us" class="">
-	<h1 class="text-xl">Consulta con nuestros Expertos</h1>
-	<p class=" mt-7">
-		El personal profesional de Solano & Mota tiene el conocimiento académico,
-		las habilidades lingüísticas y la experiencia profesional necesarias para
-		brindar asesoramiento y orientación en diferentes áreas legales.
-	</p>
-</header>
-
 <section id="the-firm">
 	<h2 class="">La Firma</h2>
 	<p class="">

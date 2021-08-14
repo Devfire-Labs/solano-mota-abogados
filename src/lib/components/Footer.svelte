@@ -40,10 +40,10 @@
 		>
 	</div>
 	<div class="flex flex-wrap text-white mt-7">
-		<a href="" class="footer-link">Inicio</a>
-		<a href="" class="footer-link">Sobre nosotros</a>
-		<a href="" class="footer-link">Servicios</a>
-		<a href="" class="footer-link">Contacto</a>
+		<a href="/" class="footer-link">Inicio</a>
+		<a href="/nosotros" class="footer-link">Sobre nosotros</a>
+		<a href="/servicios" class="footer-link">Servicios</a>
+		<a href="/contacto" class="footer-link">Contacto</a>
 	</div>
 	<div class="text-white font-galey text-left mt-5">
 		{#each info as { img: { src, alt }, text }, i (i)}
