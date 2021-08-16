@@ -17,7 +17,7 @@
 		Subscríbete para recibir nuestras promociones y ofertas por correo
 		electrónico:
 	</h3>
-	<form action="" class=" mt-6">
+	<form on:submit={(e) => e.preventDefault()} class=" mt-6">
 		<input
 			type="text"
 			class="text-center block w-full rounded-sm py-1"
@@ -29,7 +29,9 @@
 			>Subscribirse</button
 		>
 	</form>
-	<img src="/assets/logo.svg" alt="" class="mx-auto mt-10" />
+	<a href="/" class="block mx-auto">
+		<img src="/assets/logo.svg" alt="" class="mx-auto mt-10" />
+	</a>
 	<div class="flex justify-between mt-5 mx-auto w-3/5">
 		<a href=""><img src="/assets/twitter.svg" alt="Twitter icon" class="" /></a>
 		<as class=""

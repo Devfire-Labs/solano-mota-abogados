@@ -5,11 +5,15 @@
 		disposición a nuestro equipo de abogados. Rellena el formulario y nuestro
 		equipo se pondrá en contacto lo antes posible.
 	</p>
-	<form action="" class="mt-4">
+	<form on:submit={(e) => e.preventDefault()} class="mt-4">
 		<input type="text" placeholder="Nombre" class="text-input" />
 		<input type="text" placeholder="Correo" class="text-input" />
 		<textarea class="text-input textarea" placeholder="Mensaje" />
-		<button type="submit" class="bg-secondary inline-block mt-6 rounded-md text-white font-blueberry font-bold px-11 py-2">Enviar</button>
+		<button
+			type="submit"
+			class="bg-secondary inline-block mt-6 rounded-md text-white font-blueberry font-bold px-11 py-2"
+			>Enviar</button
+		>
 	</form>
 </section>
 
