@@ -4,6 +4,7 @@
 		{
 			img: { src: '/assets/envelope.svg', alt: '' },
 			text: 'SolanoyMota@gmail.com',
+			href: 'mailto:SolanoyMota@gmail.com',
 		},
 		{
 			img: { src: '/assets/pin.svg', alt: '' },
@@ -48,11 +49,18 @@
 		<a href="/contacto" class="footer-link">Contacto</a>
 	</div>
 	<div class="text-white font-galey text-left mt-5">
-		{#each info as { img: { src, alt }, text }, i (i)}
-			<div class="flex mb-3">
-				<img {src} {alt} class=" w-5" />
-				<h3 class="ml-3">{text}</h3>
-			</div>
+		{#each info as { img: { src, alt }, text, href }, i (i)}
+			{#if href}
+				<div class="flex mb-3">
+					<img {src} {alt} class=" w-5" />
+					<a {href} target="_blank" class="ml-3">{text}</a>
+				</div>
+			{:else}
+				<div class="flex mb-3">
+					<img {src} {alt} class=" w-5" />
+					<h3 class="ml-3">{text}</h3>
+				</div>
+			{/if}
 		{/each}
 	</div>
 	<div class="border-t-2 border-quinary text-white pt-2 text-sm mt-6">
