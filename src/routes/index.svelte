@@ -15,3 +15,10 @@
 	<WhyWorkWithUs />
 	<ContactUs />
 </main>
+
+<!-- <style>
+	h2 {
+		@apply lg:text-2xl;
+	}
+
+</style> -->

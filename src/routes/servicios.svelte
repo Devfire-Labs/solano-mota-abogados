@@ -41,22 +41,24 @@
 
 <svelte:head><title>Servicios</title></svelte:head>
 
-<header class="">
-	<h1 class="text-xl">Nuestros Servicios</h1>
-	<p class="mt-3">
-		Solano & Mota se especializa en obtener un conocimiento profundo de las
-		necesidades del cliente para brindar soluciones personalizadas a través de
-		la creación de estrategias legales innovadoras.
-	</p>
-</header>
-<section id="services" class="mb-10">
-	{#each services as { img, title, body, list }, i (i)}<ServiceCard
-			{img}
-			{title}
-			{body}
-			{list}
-		/>{/each}
-</section>
+<div class="px-10">
+	<header class="">
+		<h1 class="text-xl">Nuestros Servicios</h1>
+		<p class="mt-3">
+			Solano & Mota se especializa en obtener un conocimiento profundo de las
+			necesidades del cliente para brindar soluciones personalizadas a través de
+			la creación de estrategias legales innovadoras.
+		</p>
+	</header>
+	<section id="services" class="mb-10 lg:grid grid-cols-2 gap-x-8">
+		{#each services as { img, title, body, list }, i (i)}<ServiceCard
+				{img}
+				{title}
+				{body}
+				{list}
+			/>{/each}
+	</section>
+</div>
 
 <style>
 	h2 {

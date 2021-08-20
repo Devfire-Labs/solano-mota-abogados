@@ -16,14 +16,16 @@
 </script>
 
 <section id="why-work-with-us" class="py-10 px-5 text-center">
-	<h2 class="text-xl">¿Por Qué Elegirnos?</h2>
-	{#each reasons as { title, body }, i (i)}
-		<div class="mt-6">
-			<h3 class="">{title}</h3>
-			<p class="leading-6 mt-2">{body}</p>
-		</div>
-	{/each}
-	<a href="" class="inline-block bg-primary text-quinary rounded-md px-7 py-2.5 mt-11"
+	<h2 class="text-xl lg:text-2xl">¿Por Qué Elegirnos?</h2>
+	<div class="lg:grid grid-cols-3 gap-x-6 lg:w-4/5 lg:mx-auto">
+		{#each reasons as { title, body }, i (i)}
+			<div class="mt-6">
+				<h3 class="text-xl">{title}</h3>
+				<p class="leading-6 mt-2">{body}</p>
+			</div>
+		{/each}
+	</div>
+	<a href="" class="inline-block bg-primary text-quinary rounded-md px-7 py-2.5 mt-11 lg:text-lg"
 		>Sobre nosotros</a
 	>
 </section>

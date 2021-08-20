@@ -26,15 +26,24 @@
 </script>
 
 <section id="services" class=" pt-10 px-5 text-center">
-	<h2 class=" text-xl">Nuestros Servicios</h2>
-	<p class="mt-4">
+	<h2 class=" text-xl lg:text-2xl">Nuestros Servicios</h2>
+	<p class="mt-4 lg:w-2/3 lg:mx-auto lg:text-lg">
 		Solano & Mota brinda un servicio integral para satisfacer todas las
 		necesidades comerciales y personales de nuestros clientes en cualquiera de
 		nuestras áreas profesionales.
 	</p>
-	{#each services as { img, title, body }, i (i)}<ServiceCard
-			{img}
-			{title}
-			{body}
-		/>{/each}
+	<div class="lg:grid grid-cols-4 gap-x-4">
+		{#each services as { img, title, body }, i (i)}<ServiceCard
+				{img}
+				{title}
+				{body}
+			/>{/each}
+	</div>
+	<div class="mt-8">
+		<a
+			href="servicios"
+			class="bg-secondary text-white font-blueberry text-lg px-4 py-3 rounded-sm"
+			>Ver todos los servicios</a
+		>
+	</div>
 </section>
