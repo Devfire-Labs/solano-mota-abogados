@@ -49,23 +49,30 @@
 
 <section id="values" class="">
 	<h2 class="">Nuestros Valores</h2>
-	{#each values as { title, body }, i (i)}
-		<div class="" class:mt-5={i > 0}>
-			<h3 class="text-secondary text-lg">
+	<div class="value lg:grid lg:text-left lg:px-8 gap-y-4 gap-x-8">
+		{#each values as { title, body }, i (i)}
+			<h3 class="text-secondary text-lg whitespace-nowrap">
 				<span class="text-2xl">{i + 1}.</span>
 				{title}
 			</h3>
 			<p class="">{body}</p>
-		</div>
-	{/each}
+		{/each}
+	</div>
 </section>
 
 <section id="our-team" class="pb-10">
-	<h2 class="">Nuestro Equipo</h2>
+	<h2 class="">Conoce al Equipo</h2>
 	{#each team as { name, img: { src, alt }, bio }, i (i)}
-		<div class="mt-4">
-			<img {src} {alt} class="w-full" />
-			<div class="bg-primary text-white text-left p-6">
+		<div class="mt-4 lg:mt-8 lg:grid w-4/6 mx-auto team-member">
+			<img
+				{src}
+				{alt}
+				class="w-full col-start-1 col-end-[10] rounded-xl shadow-xl"
+				class:img-right={i % 2 == 0}
+			/>
+			<div
+				class="bg-primary text-white text-left p-6 col-start-9 col-end-[21] row-start-2 row-span-full shadow-2xl"
+			>
 				<h3 class="text-quinary text-xl">{name}</h3>
 				<p class="mt-2">{bio}</p>
 			</div>
@@ -75,11 +82,24 @@
 
 <ContactUs />
 
-<style>
+<style lang="postcss">
 	h2 {
 		@apply text-xl mb-2;
 	}
-	section, header {
-		@apply pt-6 px-5;
+	section,
+	header {
+		@apply pt-10 px-5;
 	}
+
+	.value {
+		grid-template-columns: min-content auto;
+	}
+
+	.team-member {
+		grid-template-rows: repeat(20, minmax(0, 20px));
+		grid-template-columns: repeat(20, minmax(0, 1fr));
+	}
+	/* img.img-right {
+		@apply order-last col-start-13 col-end-8;
+	} */
 </style>

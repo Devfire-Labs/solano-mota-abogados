@@ -1,24 +1,25 @@
 <script>
-	import Navbar from '$lib/components/Navbar.svelte';
-	import '../styles/tailwind-output.css';
-	import '../styles/base.css';
-	import Footer from '$lib/components/Footer.svelte';
-	import Menu from '$lib/components/Menu.svelte';
+	import "../app.postcss";
+    import Navbar from '$lib/components/Navbar.svelte';
+    import Footer from '$lib/components/Footer.svelte';
+    import Menu from '$lib/components/Menu.svelte';
 </script>
 
-<Menu />
+<Menu>
 
-<Navbar />
+<Navbar>
 
 <main>
-	<slot />
-</main>
+	<slot>
+</slot></main>
 
-<Footer />
+<Footer>
 
-<style>
+<style lang="postcss">
 	main {
 		max-width: 1280px;
 		margin: 0 auto;
 	}
 </style>
+</Footer></Navbar></Menu>
+<slot></slot>
