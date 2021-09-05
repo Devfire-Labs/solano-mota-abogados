@@ -5,6 +5,7 @@
 	import WhyWorkWithUs from '$lib/components/WhyWorkWithUs.svelte';
 
 	export const prerender = true;
+
 </script>
 
 <svelte:head><title>Home</title></svelte:head>

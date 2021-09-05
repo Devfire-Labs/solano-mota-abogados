@@ -1,7 +1,6 @@
-module.exports = {
+const config = {
 	mode: 'jit',
-	purge: ['./src/**/*.svelte'],
-	darkMode: false, // or 'media' or 'class'
+	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -18,8 +17,7 @@ module.exports = {
 			},
 		},
 	},
-	variants: {
-		extend: {},
-	},
 	plugins: [],
 };
+
+module.exports = config;
