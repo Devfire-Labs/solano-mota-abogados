@@ -1,0 +1,38 @@
+@tailwind base;
+
+/* Write your global styles here, in PostCSS syntax */
+
+@font-face {
+	font-family: 'Gilland';
+	src: url('/fonts/Gilland-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Galey';
+	src: url('/fonts/Prestigetype Studio - Galey Semi Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Blueberry Sans';
+	src: url('/fonts/BlueberrySans-Bold.woff2');
+}
+
+h1,
+h2,
+h3 {
+	@apply font-gilland;
+}
+
+body {
+	@apply font-galey text-center;
+}
+
+@media (max-width: 1280px) {
+	h2 {
+		@apply text-5xl;
+	}
+}
+
+@tailwind components;
+
+@tailwind utilities
